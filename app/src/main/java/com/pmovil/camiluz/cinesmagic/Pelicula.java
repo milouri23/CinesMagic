@@ -14,8 +14,8 @@ public class Pelicula {
 
     private String mTitulo;
 
-    private int imageCartelResourceId;
-    private int imageTrailerResourceId;
+    private int mImageCartelResourceId;
+    private int mImageTrailerResourceId;
 
     /** Calificación de 1 a 5 */
     private float mCalificacion;
@@ -31,7 +31,7 @@ public class Pelicula {
 
     public Pelicula (String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D) {
         mTitulo = titulo;
-        imageCartelResourceId = imageCartelResourceId;
+        mImageCartelResourceId = imageCartelResourceId;
         mEstaEn2D = estaEn2D;
         mEstaEn3D = estaEn3D;
     }
@@ -48,13 +48,33 @@ public class Pelicula {
         setHorasProyeccion(horasProyeccion);
     }
 
-    private void setCalificacion(float calificacion) {
+    public void setCalificacion(float calificacion) {
         calificacion = calificacion > MAX_CALIFICACION ? MAX_CALIFICACION :
                 calificacion < MIN_CALIFICACION ? MIN_CALIFICACION : calificacion;
     }
 
-    private void setHorasProyeccion(String[] horasProyeccion) {
+    public void setHorasProyeccion(String[] horasProyeccion) {
 
     }
 
+    public int getImageCartelResourceId() {
+        return mImageCartelResourceId;
+    }
+
+    /** Nombre de la película(formatos) */
+    @Override
+    public String toString() {
+        // StringBuilder pelicula = new StringBuilder(50);
+        String mensaje = mTitulo + " (";
+        if(mEstaEn3D) {
+            // Ghost in the shell (3D 2D)
+            mensaje += "3D ";
+        }
+        if(mEstaEn2D) {
+            mensaje += "2D";
+        }
+        mensaje += ")";
+
+        return mensaje;
+    }
 }
