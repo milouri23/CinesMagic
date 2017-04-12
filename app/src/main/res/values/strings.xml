@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Cines Magic</string>
+
+    <string name="titulo_logan">Logan</string>
+
+    <string name="titulo_ghost">Ghost</string>
+    <string name="sinopsis_logan">Sin sus poderes, por primera vez, Wolverine es verdaderamente
+        vulnerable. Después de una vida de dolor y angustia, sin rumbo y perdido en el mundo donde
+        los X-Men son leyenda, su mentor Charles Xavier lo convence de asumir una última misión:
+        proteger a una joven que será la única esperanza para la raza mutante.</string>
+
+    <string name="sinopsis_ghost_in_the_shell">Basada en la internacionalmente aclamada saga de
+        ciencia ficción, “GHOST IN THE SHELL” narra la historia de the Major, un híbrido
+        cyborg-humano femenino único en su especie, de operaciones especiales, que dirige un grupo
+        operativo de elite llamado Sección 9. Consagrada a detener a los extremistas y criminales
+        más peligrosos, la Sección 9 se enfrenta a un enemigo cuyo objetivo principal consiste en
+        anular los avances de Hanka Robotic en el campo de la ciber-tecnología.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

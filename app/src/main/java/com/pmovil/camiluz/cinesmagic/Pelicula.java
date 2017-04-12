@@ -36,9 +36,9 @@ public class Pelicula {
         mEstaEn3D = estaEn3D;
     }
 
-    public Pelicula(String titulo, int imageCartelResourceId, float calificacion, String sinopsis, String enlaceVideo,
-                    boolean estaEn2D, boolean estaEn3D, int duracion,
-                    String[] horasProyeccion){
+    public Pelicula(String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D,
+                    float calificacion, String sinopsis, String enlaceVideo,
+                    int duracion, String[] horasProyeccion){
 
         this(titulo, imageCartelResourceId, estaEn2D, estaEn3D);
         setCalificacion(calificacion);

@@ -25,7 +25,7 @@ public class PeliculaAdapter extends ArrayAdapter<Pelicula> {
     /** Método constructor
      *
      * @param context es la actividad en donde se van a mostrar los items
-     * @param peliculas es el arreglo de películas (cartelera) de donde se van a sacar las
+     * @param peliculas es el arreglo de películas (mCartelera) de donde se van a sacar las
      *                  imágenes y el título
      */
     public PeliculaAdapter(Activity context, ArrayList<Pelicula> peliculas) {
