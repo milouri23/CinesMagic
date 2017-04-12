@@ -6,12 +6,13 @@
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/imagen_pelicula"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="251dp"
         android:src="@drawable/cartel_ghost" />
+
     <TextView
         android:id="@+id/nombre_pelicula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text= "Ghost in the Shell (2D)" />
+        tools:text="Ghost in the Shell (2D)" />
 </LinearLayout>
