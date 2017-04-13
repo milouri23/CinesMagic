@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 public class TrailerFragment extends Fragment {
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
