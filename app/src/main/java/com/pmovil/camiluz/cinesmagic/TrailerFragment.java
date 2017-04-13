@@ -22,7 +22,7 @@ public class TrailerFragment extends Fragment {
         // Inflate the layout for this fragment
         View trailerLayout = inflater.inflate(R.layout.fragment_trailer, container, false);;
         ImageView trailerImage = (ImageView) trailerLayout.findViewById(R.id.trailer_imagen);
-        trailerImage.setImageResource(R.drawable.trailer_power);
+        trailerImage.setImageResource(DetallesActivity.pelicula.getImagenTrailer());
         ImageButton trailerBoton = (ImageButton) trailerLayout.findViewById(R.id.trailer_button);
         trailerBoton.setOnClickListener(new View.OnClickListener() {
             @Override

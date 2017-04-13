@@ -59,6 +59,10 @@ public class Pelicula implements Serializable {
 
     }
 
+    public int getImagenTrailer() {
+        return mImageTrailerResourceId;
+    }
+
     public int getImageCartelResourceId() {
         return mImageCartelResourceId;
     }
