@@ -1,15 +1,12 @@
 package com.pmovil.camiluz.cinesmagic;
 
 import android.content.Intent;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CineManagerActivity extends AppCompatActivity {
@@ -24,15 +21,14 @@ public class CineManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cine_manager);
 
-        String sinopsis = getString(R.string.sinopsis_ghost_in_the_shell);
+        String sinopsis = getString(R.string.sinopsis_titulo_1);
 
         mCartelera = new ArrayList<Pelicula>();
-        mCartelera.add(new Pelicula("Ghost in the Shell", R.drawable.cartel_ghost, true, false, 3.5f,
-                getString(R.string.sinopsis_ghost_in_the_shell),
-                "https://www.youtube.com/watch?v=kOdhsIFPzJk", 90,
-                new String[]{"15:30", "18:05", "21:00"}));
-        mCartelera.add(new Pelicula("Logan", R.drawable.cartel_logan, true, false, 3,
-                getString(R.string.sinopsis_logan), "https://www.youtube.com/watch?v=kOdhsIFPzJk",
+        mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_ghost, true,
+                false, 3.5f, getString(R.string.sinopsis_titulo_1), getString(R.string.url_titulo_1),
+                90, new String[]{"15:30", "18:05", "21:00"}));
+        mCartelera.add(new Pelicula(getString(R.string.titulo_2), R.drawable.cartel_logan, true,
+                false, 3, getString(R.string.sinopsis_titulo_2), getString(R.string.url_titulo_2),
                 85, new String[]{"14:20", "17:55", "20:32"}));
         mCartelera.add(new Pelicula("Power Rangers", R.drawable.cartel_power, true, true));
         mCartelera.add(new Pelicula("Life", R.drawable.cartel_life, false, true));
