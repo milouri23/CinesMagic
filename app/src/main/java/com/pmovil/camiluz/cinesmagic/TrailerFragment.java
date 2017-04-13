@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 public class TrailerFragment extends Fragment {
 
@@ -19,7 +20,7 @@ public class TrailerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View trailerLayout = LayoutInflater.from(getContext()).inflate(R.layout.movie_item, container, false);;
+        View trailerLayout = inflater.inflate(R.layout.fragment_trailer, container, false);;
         ImageView trailerImage = (ImageView) trailerLayout.findViewById(R.id.trailer_imagen);
         trailerImage.setImageResource(R.drawable.trailer_power);
         ImageButton trailerBoton = (ImageButton) trailerLayout.findViewById(R.id.trailer_button);
