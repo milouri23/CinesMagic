@@ -28,10 +28,10 @@ public class CineManagerActivity extends AppCompatActivity {
         mCartelera.add(new Pelicula(getString(R.string.titulo_2), R.drawable.cartel_logan, true,
                 false, 8.5f, getString(R.string.sinopsis_titulo_2), R.drawable.trailer_logan,
                 getString(R.string.trailer_titulo_2), 141, new String[]{"14:20", "17:55", "20:32"}));
-        mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_power, true,
+        mCartelera.add(new Pelicula(getString(R.string.titulo_3), R.drawable.cartel_power, true,
                 true, 6.9f, getString(R.string.sinopsis_titulo_3), R.drawable.trailer_power,
                 getString(R.string.trailer_titulo_3), 124, new String[]{"15:30", "18:05", "21:00"}));
-        mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_life, false,
+        mCartelera.add(new Pelicula(getString(R.string.titulo_4), R.drawable.cartel_life, false,
                 true, 7, getString(R.string.sinopsis_titulo_4), R.drawable.trailer_life,
                 getString(R.string.trailer_titulo_4), 104, new String[]{"15:30", "18:05", "21:00"} ));
 

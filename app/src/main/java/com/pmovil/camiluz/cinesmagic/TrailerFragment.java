@@ -19,14 +19,15 @@ public class TrailerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        final Pelicula pelicula = DetallesActivity.pelicula;
         View trailerLayout = inflater.inflate(R.layout.fragment_trailer, container, false);;
         ImageView trailerImage = (ImageView) trailerLayout.findViewById(R.id.trailer_imagen);
-        trailerImage.setImageResource(DetallesActivity.pelicula.getImagenTrailer());
+        trailerImage.setImageResource(pelicula.getImagenTrailer());
         ImageButton trailerBoton = (ImageButton) trailerLayout.findViewById(R.id.trailer_button);
         trailerBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(DetallesActivity.pelicula.getUrlVideo())));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(pelicula.getUrlVideo())));
             }
         });
         return trailerLayout;

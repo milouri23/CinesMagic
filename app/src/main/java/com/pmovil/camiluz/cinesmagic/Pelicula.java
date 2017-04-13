@@ -1,6 +1,7 @@
 package com.pmovil.camiluz.cinesmagic;
 
 import android.net.Uri;
+import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Pelicula implements Serializable {
     private int mImageCartelResourceId;
     private int mImageTrailerResourceId;
 
-    /** Calificación de 1 a 5 */
+    /** Calificación de MIN_CALIFICACION a MAX_CALIFICACION */
     private float mCalificacion;
 
     private String mSinopsis;
@@ -51,7 +52,7 @@ public class Pelicula implements Serializable {
     }
 
     public void setCalificacion(float calificacion) {
-        calificacion = calificacion > MAX_CALIFICACION ? MAX_CALIFICACION :
+        mCalificacion = calificacion > MAX_CALIFICACION ? MAX_CALIFICACION :
                 calificacion < MIN_CALIFICACION ? MIN_CALIFICACION : calificacion;
     }
 
@@ -71,6 +72,10 @@ public class Pelicula implements Serializable {
         return mUrlVideo;
     }
 
+    public String getTitulo() {
+        return mTitulo;
+    }
+
     /** Nombre de la película(formatos) */
     @Override
     public String toString() {
@@ -78,13 +83,25 @@ public class Pelicula implements Serializable {
         String mensaje = mTitulo + " (";
         if(mEstaEn3D) {
             // Ghost in the shell (3D 2D)
-            mensaje += "3D ";
+            mensaje += " 3D ";
         }
         if(mEstaEn2D) {
-            mensaje += "2D";
+            mensaje += " 2D ";
         }
         mensaje += ")";
 
         return mensaje;
+    }
+
+    public String getSinopsis() {
+        return mSinopsis;
+    }
+
+    public int getDuracion() {
+        return mDuracion;
+    }
+
+    public float getCalificacion() {
+        return mCalificacion;
     }
 }

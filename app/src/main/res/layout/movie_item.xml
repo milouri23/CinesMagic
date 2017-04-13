@@ -3,16 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="4dp">
     <ImageView
         android:id="@+id/imagen_pelicula"
         android:layout_width="170dp"
         android:layout_height="251dp"
-        android:src="@drawable/cartel_ghost" />
+        android:src="@drawable/cartel_ghost"
+        android:layout_marginTop="4dp"/>
 
     <TextView
         android:id="@+id/nombre_pelicula"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        tools:text="Ghost in the Shell (2D)" />
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        tools:text="Ghost in the Shell ( 2D 3D 4D 5D)"
+        android:lines="2"
+        android:layout_marginBottom="16dp"/>
 </LinearLayout>
