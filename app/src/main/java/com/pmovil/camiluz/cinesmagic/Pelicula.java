@@ -38,7 +38,7 @@ public class Pelicula implements Serializable {
     }
 
     public Pelicula(String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D,
-                    float calificacion, String sinopsis, String urlVideo,
+                    float calificacion, String sinopsis, int imageTrailerResourceId, String urlVideo,
                     int duracion, String[] horasProyeccion){
 
         this(titulo, imageCartelResourceId, estaEn2D, estaEn3D);
@@ -46,6 +46,7 @@ public class Pelicula implements Serializable {
         mSinopsis = sinopsis;
         mUrlVideo = urlVideo;
         mDuracion = duracion;
+        mImageTrailerResourceId = imageTrailerResourceId;
         setHorasProyeccion(horasProyeccion);
     }
 
@@ -60,6 +61,10 @@ public class Pelicula implements Serializable {
 
     public int getImageCartelResourceId() {
         return mImageCartelResourceId;
+    }
+
+    public String getUrlVideo() {
+        return mUrlVideo;
     }
 
     /** Nombre de la película(formatos) */

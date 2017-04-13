@@ -21,17 +21,19 @@ public class CineManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cine_manager);
 
-        String sinopsis = getString(R.string.sinopsis_titulo_1);
-
         mCartelera = new ArrayList<Pelicula>();
         mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_ghost, true,
-                false, 3.5f, getString(R.string.sinopsis_titulo_1), getString(R.string.url_titulo_1),
-                90, new String[]{"15:30", "18:05", "21:00"}));
+                false, 6.8f, getString(R.string.sinopsis_titulo_1), R.drawable.trailer_power,
+                getString(R.string.trailer_titulo_1), 107, new String[]{"15:30", "18:05", "21:00"}));
         mCartelera.add(new Pelicula(getString(R.string.titulo_2), R.drawable.cartel_logan, true,
-                false, 3, getString(R.string.sinopsis_titulo_2), getString(R.string.url_titulo_2),
-                85, new String[]{"14:20", "17:55", "20:32"}));
-        mCartelera.add(new Pelicula("Power Rangers", R.drawable.cartel_power, true, true));
-        mCartelera.add(new Pelicula("Life", R.drawable.cartel_life, false, true));
+                false, 8.5f, getString(R.string.sinopsis_titulo_2), R.drawable.trailer_power,
+                getString(R.string.trailer_titulo_2), 141, new String[]{"14:20", "17:55", "20:32"}));
+        mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_power, true,
+                true, 6.9f, getString(R.string.sinopsis_titulo_3), R.drawable.trailer_power,
+                getString(R.string.trailer_titulo_3), 124, new String[]{"15:30", "18:05", "21:00"}));
+        mCartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_life, false,
+                true, 7, getString(R.string.sinopsis_titulo_4), R.drawable.trailer_power,
+                getString(R.string.trailer_titulo_4), 104, new String[]{"15:30", "18:05", "21:00"} ));
 
         Pelicula ghost = new Pelicula("Ghost in the Shell", R.drawable.cartel_ghost, true, false);
         PeliculaAdapter adaptadorDePeliculas = new PeliculaAdapter(this, mCartelera);

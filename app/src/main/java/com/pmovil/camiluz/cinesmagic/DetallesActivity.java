@@ -7,11 +7,12 @@ import android.support.design.widget.TabLayout;
 
 public class DetallesActivity extends AppCompatActivity {
 
+    public static Pelicula pelicula;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalles);
 
-        Pelicula pelicula = (Pelicula) getIntent().getSerializableExtra(
+        pelicula = (Pelicula) getIntent().getSerializableExtra(
                 CineManagerActivity.EXTRA_PELICULA);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);

@@ -8,14 +8,31 @@
         operativo de elite llamado Sección 9. Consagrada a detener a los extremistas y criminales
         más peligrosos, la Sección 9 se enfrenta a un enemigo cuyo objetivo principal consiste en
         anular los avances de Hanka Robotic en el campo de la ciber-tecnología.</string>
-    <string name="url_titulo_1">https://www.youtube.com/watch?v=kOdhsIFPzJk</string>
+    <string name="trailer_titulo_1">https://www.youtube.com/watch?v=kOdhsIFPzJk</string>
 
     <string name="titulo_2">Logan</string>
     <string name="sinopsis_titulo_2">Sin sus poderes, por primera vez, Wolverine es verdaderamente
         vulnerable. Después de una vida de dolor y angustia, sin rumbo y perdido en el mundo donde
         los X-Men son leyenda, su mentor Charles Xavier lo convence de asumir una última misión:
         proteger a una joven que será la única esperanza para la raza mutante.</string>
-    <string name="url_titulo_2">https://www.youtube.com/watch?v=kOdhsIFPzJk</string>
+    <string name="trailer_titulo_2">https://www.youtube.com/watch?v=kOdhsIFPzJk</string>
+
+    <string name="titulo_3">Power Rangers</string>
+    <string name="sinopsis_titulo_3">La película sigue a cinco ordinarios jóvenes en la preparatoria
+        que tienen que convertirse en algo extraordinario cuando descubren que su modesto poblado de
+        Angel Grove –y el resto del mundo– está al borde de la aniquilación por una amenaza
+        alienígena. Elegidos por el destino, nuestros héroes descubren rápidamente que son los
+        únicos que pueden salvar al planeta. Pero para lograrlo tendrán que superar problemas de la
+        vida real y unirse como los Power Rangers antes de que sea demasiado tarde.</string>
+    <string name="trailer_titulo_3">https://www.youtube.com/watch?v=5kIe6UZHSXw</string>
+
+    <string name="titulo_4">Life</string>
+    <string name="sinopsis_titulo_4">Seis miembros de la tripulación de la Estación Espacial
+        Internacional están a punto de lograr uno de los descubrimientos más importantes en la
+        historia humana: la primera evidencia de vida extraterrestre en Marte. A medida que el
+        equipo comienza a investigar y sus métodos tienen consecuencias inesperadas, la forma
+        viviente demostrará ser más inteligente de lo que cualquiera esperaba.</string>
+    <string name="trailer_titulo_4">https://www.youtube.com/watch?v=LeLsJfGmY_Y</string>
 
 
 
