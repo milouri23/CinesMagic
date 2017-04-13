@@ -1,15 +1,20 @@
 package com.pmovil.camiluz.cinesmagic;
 
 import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CineManagerActivity extends AppCompatActivity {
+
+    public final static String EXTRA_PELICULA = "com.pmovil.camiluz.cinesmagic.PELICULA";
 
     static ArrayList<Pelicula> mCartelera;
     String prueba;
@@ -41,11 +46,11 @@ public class CineManagerActivity extends AppCompatActivity {
         diseñoCuadricula.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               Intent intent = new Intent(CineManagerActivity.this, DetallesActivity.class);
-                intent.putExtra("position", position);
+                Intent intent = new Intent(CineManagerActivity.this, DetallesActivity.class);
+                Pelicula pelicula_escogida = mCartelera.get(position);
+                intent.putExtra(EXTRA_PELICULA, pelicula_escogida);
                 startActivity(intent);
             }
         });
     }
-
 }

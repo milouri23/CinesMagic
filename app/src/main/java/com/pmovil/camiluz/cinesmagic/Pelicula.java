@@ -2,13 +2,14 @@ package com.pmovil.camiluz.cinesmagic;
 
 import android.net.Uri;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Camilo on 12/04/2017.
  */
 
-public class Pelicula {
+public class Pelicula implements Serializable {
     private static int MAX_CALIFICACION = 5;
     private static int MIN_CALIFICACION = 0;
 
@@ -21,7 +22,7 @@ public class Pelicula {
     private float mCalificacion;
 
     private String mSinopsis;
-    private Uri mPeticionVideo;
+    private String mUrlVideo;
     private boolean mEstaEn2D;
     private boolean mEstaEn3D;
 
@@ -37,13 +38,13 @@ public class Pelicula {
     }
 
     public Pelicula(String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D,
-                    float calificacion, String sinopsis, String enlaceVideo,
+                    float calificacion, String sinopsis, String urlVideo,
                     int duracion, String[] horasProyeccion){
 
         this(titulo, imageCartelResourceId, estaEn2D, estaEn3D);
         setCalificacion(calificacion);
         mSinopsis = sinopsis;
-        mPeticionVideo = Uri.parse(enlaceVideo);
+        mUrlVideo = urlVideo;
         mDuracion = duracion;
         setHorasProyeccion(horasProyeccion);
     }
