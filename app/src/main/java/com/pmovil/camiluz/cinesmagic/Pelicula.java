@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 
 public class Pelicula implements Serializable {
-    private static int MAX_CALIFICACION = 10;
+    private static int MAX_CALIFICACION = 5;
     private static int MIN_CALIFICACION = 0;
 
     private String mTitulo;
