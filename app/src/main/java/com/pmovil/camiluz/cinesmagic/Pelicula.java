@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class Pelicula implements Serializable {
@@ -27,6 +28,8 @@ public class Pelicula implements Serializable {
     /* duración en minutos **/
     private int mDuracion;
     private ArrayList<String> mHorasProyeccion = new ArrayList<String>();
+
+    String salidaDeCartelera;
 
     public Pelicula (String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D) {
         mTitulo = titulo;

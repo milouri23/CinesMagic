@@ -1,35 +1,78 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     tools:context="com.pmovil.camiluz.cinesmagic.ReservasFragment">
-    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/cartel_reservas_imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
     <ImageView
         android:layout_width="170dp"
         android:layout_height="251dp"
-        tools:src="@drawable/cartel_ghost" />
+        android:src="@drawable/cartel_ghost"
+        android:layout_marginBottom="4dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="8dp"
-            android:textSize="18dp"
-            tools:text="Ghost in the Shell" />
+            android:layout_margin="8dp"
+            android:textAppearance="?android:textAppearanceSmall"            android:background="#3F51B5"
+            android:textColor="@android:color/white"
+            android:text="Abr 14"
+            android:layout_weight="2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceSmall"            android:textColor="@android:color/white"
+            android:background="#3F51B5"
+            android:text="Abr 15"
+            android:layout_weight="2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?android:textAppearanceSmall"            android:background="#3F51B5"
+            android:textColor="@android:color/white"
+            android:text="Abr 16"
+            android:layout_weight="2"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="3D"
-            android:textSize="36dp"
-            android:layout_gravity="center"            />
+            android:text="Elija un día"
+            android:textAppearance="?android:textAppearanceSmall"            android:padding="10dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="251dp"
+        android:layout_toRightOf="@id/cartel_reservas_imagen"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="24dp"
+        android:textColor="@android:color/black"
+        android:text="Ghost in the Shell" />
+
+    <LinearLayout
+        android:id="@+id/selector_de_dias"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center">
 
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
