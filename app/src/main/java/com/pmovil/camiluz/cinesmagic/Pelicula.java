@@ -61,7 +61,7 @@ public class Pelicula implements Serializable {
     }
 
     /** Almacenar las horas de proyección pasadas a la variable mHorasProyeccion */
-    public void setHorasProyeccion(String[] horasProyeccion) {
+    private void setHorasProyeccion(String[] horasProyeccion) {
         for(String horaProyeccion : horasProyeccion) {
             mHorasProyeccion.add(horaProyeccion);
         }
@@ -73,6 +73,11 @@ public class Pelicula implements Serializable {
             horasProyeccion[index] = mHorasProyeccion.get(index);
         }
         return horasProyeccion;
+    }
+
+    public Pelicula cambiarFormato() {
+        this.setFormato(!this.mEstaEn3D);
+        return this;
     }
 
     public int getImagenTrailer() {
