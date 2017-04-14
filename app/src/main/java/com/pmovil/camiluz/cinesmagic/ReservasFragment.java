@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ReservasFragment extends Fragment {
 
@@ -14,7 +16,13 @@ public class ReservasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View ReservasLayout = inflater.inflate(R.layout.fragment_reservas, container, false);
-        // Inflate the layout for this fragment
+
+        Pelicula pelicula = DetallesActivity.pelicula;
+        TextView tituloPelicula = (TextView) ReservasLayout.findViewById(R.id.titulo_pelicula);
+        ImageView imagenReserva = (ImageView) ReservasLayout.findViewById(R.id.cartel_reservas_imagen);
+
+        tituloPelicula.setText(pelicula.getTitulo());
+        imagenReserva.setImageResource(pelicula.getImageCartelResourceId());
         return ReservasLayout;
     }
 

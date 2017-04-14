@@ -8,12 +8,13 @@
     tools:context="com.pmovil.camiluz.cinesmagic.ReservasFragment">
 
     <LinearLayout
-        android:id="@+id/cartel_reservas_imagen"
+        android:id="@+id/contenedor_izquierdo"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
     <ImageView
+        android:id="@+id/cartel_reservas_imagen"
         android:layout_width="170dp"
         android:layout_height="251dp"
         android:src="@drawable/cartel_ghost"
@@ -57,9 +58,10 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/titulo_pelicula"
         android:layout_width="wrap_content"
         android:layout_height="251dp"
-        android:layout_toRightOf="@id/cartel_reservas_imagen"
+        android:layout_toRightOf="@id/contenedor_izquierdo"
         android:gravity="center"
         android:padding="8dp"
         android:textSize="24dp"
