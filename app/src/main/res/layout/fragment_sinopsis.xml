@@ -47,18 +47,17 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginBottom="16dp"
             android:background="#686868" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
                 android:text="@string/etiqueta_duracion"
                 android:textColor="@android:color/black" />
 
@@ -66,8 +65,6 @@
                 android:id="@+id/duracion_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
                 android:drawableRight="@android:drawable/presence_away"
                 tools:text="30 min" />
         </LinearLayout>
@@ -75,18 +72,18 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginBottom="10dp"
             android:background="#686868" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
                 android:text="@string/etiqueta_calificacion"
                 android:textColor="@android:color/black" />
 
@@ -94,7 +91,7 @@
                 android:id="@+id/calificacion_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
                 android:drawableRight="@android:drawable/star_on"
                 tools:text="5.8/10" />
         </LinearLayout>
