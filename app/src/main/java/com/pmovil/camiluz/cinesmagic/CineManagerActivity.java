@@ -21,20 +21,20 @@ public class CineManagerActivity extends AppCompatActivity {
         // Creación de la cartelera de cine con ayuda de la clase película
         final ArrayList<Pelicula> cartelera = new ArrayList<Pelicula>();
         // Película 1
-        cartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_ghost, true, false,
+        cartelera.add(new Pelicula(getString(R.string.titulo_1), R.drawable.cartel_ghost, false,
                 6.8f, getString(R.string.sinopsis_titulo_1), R.drawable.trailer_ghost,
                 getString(R.string.trailer_titulo_1), 107, new String[]{"15:30", "18:05", "21:00"}));
         // Película 2
-        cartelera.add(new Pelicula(getString(R.string.titulo_2), R.drawable.cartel_logan, true,
+        cartelera.add(new Pelicula(getString(R.string.titulo_2), R.drawable.cartel_logan,
                 false, 8.5f, getString(R.string.sinopsis_titulo_2), R.drawable.trailer_logan,
                 getString(R.string.trailer_titulo_2), 141, new String[]{"14:20", "17:55", "20:32"}));
         // Película 3
-        cartelera.add(new Pelicula(getString(R.string.titulo_3), R.drawable.cartel_power, true,
+        cartelera.add(new Pelicula(getString(R.string.titulo_3), R.drawable.cartel_power,
                 true, 6.9f, getString(R.string.sinopsis_titulo_3), R.drawable.trailer_power,
                 getString(R.string.trailer_titulo_3), 124, new String[]{"15:30", "18:05", "21:00"}));
         // Película 4
-        cartelera.add(new Pelicula(getString(R.string.titulo_4), R.drawable.cartel_life, false,
-                true, 7, getString(R.string.sinopsis_titulo_4), R.drawable.trailer_life,
+        cartelera.add(new Pelicula(getString(R.string.titulo_4), R.drawable.cartel_life, true, 7,
+                getString(R.string.sinopsis_titulo_4), R.drawable.trailer_life,
                 getString(R.string.trailer_titulo_4), 104, new String[]{"15:30", "18:05", "21:00"} ));
 
         // Se adapta cada item según movie_item.xml a la cuadríacula dentro de activity_cine_manager

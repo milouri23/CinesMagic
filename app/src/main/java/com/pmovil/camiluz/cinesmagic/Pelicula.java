@@ -31,18 +31,17 @@ public class Pelicula implements Serializable {
 
     String salidaDeCartelera;
 
-    public Pelicula (String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D) {
+    public Pelicula (String titulo, int imageCartelResourceId, boolean estaEn3D) {
         mTitulo = titulo;
         mImageCartelResourceId = imageCartelResourceId;
-        mEstaEn2D = estaEn2D;
-        mEstaEn3D = estaEn3D;
+        setFormato(estaEn3D);
     }
 
-    public Pelicula(String titulo, int imageCartelResourceId, boolean estaEn2D, boolean estaEn3D,
+    public Pelicula(String titulo, int imageCartelResourceId, boolean estaEn3D,
                     float calificacion, String sinopsis, int imageTrailerResourceId, String urlVideo,
                     int duracion, String[] horasProyeccion){
 
-        this(titulo, imageCartelResourceId, estaEn2D, estaEn3D);
+        this(titulo, imageCartelResourceId, estaEn3D);
         setCalificacion(calificacion);
         mSinopsis = sinopsis;
         mUrlVideo = urlVideo;
@@ -51,13 +50,29 @@ public class Pelicula implements Serializable {
         setHorasProyeccion(horasProyeccion);
     }
 
-    public void setCalificacion(float calificacion) {
+    private void setFormato(boolean estaEn3D) {
+        mEstaEn3D = estaEn3D;
+        mEstaEn2D = !estaEn3D;
+    }
+
+    private void setCalificacion(float calificacion) {
         mCalificacion = calificacion > MAX_CALIFICACION ? MAX_CALIFICACION :
                 calificacion < MIN_CALIFICACION ? MIN_CALIFICACION : calificacion;
     }
 
+    /** Almacenar las horas de proyección pasadas a la variable mHorasProyeccion */
     public void setHorasProyeccion(String[] horasProyeccion) {
+        for(String horaProyeccion : horasProyeccion) {
+            mHorasProyeccion.add(horaProyeccion);
+        }
+    }
 
+    public String[] getHorasProyeccion() {
+        String[] horasProyeccion = new String[mHorasProyeccion.size()];
+        for(int index = 0; index < mHorasProyeccion.size(); index++) {
+            horasProyeccion[index] = mHorasProyeccion.get(index);
+        }
+        return horasProyeccion;
     }
 
     public int getImagenTrailer() {
@@ -80,16 +95,7 @@ public class Pelicula implements Serializable {
     @Override
     public String toString() {
         // StringBuilder pelicula = new StringBuilder(50);
-        String mensaje = mTitulo + " (";
-        if(mEstaEn3D) {
-            // Ghost in the shell (3D 2D)
-            mensaje += " 3D ";
-        }
-        if(mEstaEn2D) {
-            mensaje += " 2D ";
-        }
-        mensaje += ")";
-
+        String mensaje = mEstaEn3D ? getTitulo() + " (3D)" : getTitulo() + " (2D)";
         return mensaje;
     }
 
