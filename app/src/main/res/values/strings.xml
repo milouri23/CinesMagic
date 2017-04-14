@@ -39,8 +39,8 @@
 
     <string name="etiqueta_sinopsis">Sinopsis</string>
     <string name="etiqueta_duracion">Duración:</string>
-    <string name="valor_duracion">\t\t\t\t<xliff:g example="30" id="duracion">%d</xliff:g> minutos</string>
-    <string name="valor_calificacion">\t<xliff:g example="5.7" id="calificacion">%.1f</xliff:g>/10</string>
+    <string name="valor_duracion">\u0020<xliff:g example="30" id="duracion">%d</xliff:g> minutos</string>
+    <string name="valor_calificacion">\u0020<xliff:g example="5.7" id="calificacion">%.1f</xliff:g>/10</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -6,12 +6,9 @@ import android.widget.TextView;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by Camilo on 12/04/2017.
- */
 
 public class Pelicula implements Serializable {
-    private static int MAX_CALIFICACION = 5;
+    private static int MAX_CALIFICACION = 10;
     private static int MIN_CALIFICACION = 0;
 
     private String mTitulo;

@@ -30,5 +30,4 @@ public class SinopsisFragment extends Fragment {
 
         return sinopsisLayout;
     }
-
 }
