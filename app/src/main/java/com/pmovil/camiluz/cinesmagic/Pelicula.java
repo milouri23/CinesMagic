@@ -9,7 +9,7 @@ import java.util.Date;
 
 
 public class Pelicula implements Serializable {
-    private static int MAX_CALIFICACION = 5;
+    private static int MAX_CALIFICACION = 10;
     private static int MIN_CALIFICACION = 0;
 
     private String mTitulo;
@@ -65,11 +65,12 @@ public class Pelicula implements Serializable {
     }
 
     /** Este método crea una película con formato cambiado */
-    public Pelicula cambiarFormato() {
+    public Pelicula cambiarFormato(String[] horasProyeccion) {
         Pelicula pelicula = new Pelicula(mTitulo, mImageCartelResourceId, !mEstaEn3D, mCalificacion,
-                mSinopsis, mImageTrailerResourceId, mUrlVideo, mDuracion, mHorasProyeccion);
+                mSinopsis, mImageTrailerResourceId, mUrlVideo, mDuracion, horasProyeccion);
         return pelicula;
     }
+
 
     public int getImagenTrailer() {
         return mImageTrailerResourceId;

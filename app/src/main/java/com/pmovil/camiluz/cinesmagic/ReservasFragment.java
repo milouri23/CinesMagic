@@ -38,7 +38,7 @@ public class ReservasFragment extends Fragment {
         botonDia1.setText(obtenerMesDia(fechaHoy));
         botonDia2.setText(obtenerMesDia(fechaManana));
         botonDia3.setText(obtenerMesDia(fechaPasadoManana));
-        tituloPelicula.setText(pelicula.getTitulo());
+        tituloPelicula.setText(pelicula.toString());
         imagenReserva.setImageResource(pelicula.getImageCartelResourceId());
         return ReservasLayout;
     }

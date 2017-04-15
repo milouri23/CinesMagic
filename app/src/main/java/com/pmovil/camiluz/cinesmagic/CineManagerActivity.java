@@ -37,7 +37,7 @@ public class CineManagerActivity extends AppCompatActivity {
                 getString(R.string.sinopsis_titulo_4), R.drawable.trailer_life,
                 getString(R.string.trailer_titulo_4), 104, new String[]{"15:30", "18:05", "21:00"} ));
         // Pelicula 5
-        cartelera.add(cartelera.get(3).cambiarFormato());
+        cartelera.add(cartelera.get(3).cambiarFormato(new String[]{"14:25", "16:30", "18:35"}));
 
         // Se adapta cada item según movie_item.xml a la cuadríacula dentro de activity_cine_manager
         GridView diseñoCuadricula = (GridView) findViewById(R.id.diseño_cuadricula);
