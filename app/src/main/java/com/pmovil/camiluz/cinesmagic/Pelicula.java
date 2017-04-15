@@ -27,7 +27,7 @@ public class Pelicula implements Serializable {
 
     /* duración en minutos **/
     private int mDuracion;
-    private ArrayList<String> mHorasProyeccion = new ArrayList<String>();
+    private String[] mHorasProyeccion;
 
     String salidaDeCartelera;
 
@@ -47,8 +47,8 @@ public class Pelicula implements Serializable {
         mUrlVideo = urlVideo;
         mDuracion = duracion;
         mImageTrailerResourceId = imageTrailerResourceId;
-        setHorasProyeccion(horasProyeccion);
-    }
+        mHorasProyeccion = horasProyeccion;
+   }
 
     private void setFormato(boolean estaEn3D) {
         mEstaEn3D = estaEn3D;
@@ -60,24 +60,15 @@ public class Pelicula implements Serializable {
                 calificacion < MIN_CALIFICACION ? MIN_CALIFICACION : calificacion;
     }
 
-    /** Almacenar las horas de proyección pasadas a la variable mHorasProyeccion */
-    private void setHorasProyeccion(String[] horasProyeccion) {
-        for(String horaProyeccion : horasProyeccion) {
-            mHorasProyeccion.add(horaProyeccion);
-        }
-    }
-
     public String[] getHorasProyeccion() {
-        String[] horasProyeccion = new String[mHorasProyeccion.size()];
-        for(int index = 0; index < mHorasProyeccion.size(); index++) {
-            horasProyeccion[index] = mHorasProyeccion.get(index);
-        }
-        return horasProyeccion;
+        return mHorasProyeccion;
     }
 
+    /** Este método crea una película con formato cambiado */
     public Pelicula cambiarFormato() {
-        this.setFormato(!this.mEstaEn3D);
-        return this;
+        Pelicula pelicula = new Pelicula(mTitulo, mImageCartelResourceId, !mEstaEn3D, mCalificacion,
+                mSinopsis, mImageTrailerResourceId, mUrlVideo, mDuracion, mHorasProyeccion);
+        return pelicula;
     }
 
     public int getImagenTrailer() {
