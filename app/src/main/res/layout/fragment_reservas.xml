@@ -1,83 +1,130 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:orientation="vertical"
     tools:context="com.pmovil.camiluz.cinesmagic.ReservasFragment">
 
     <LinearLayout
-        android:id="@+id/contenedor_izquierdo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-    <ImageView
-        android:id="@+id/cartel_reservas_imagen"
-        android:layout_width="170dp"
-        android:layout_height="251dp"
-        android:src="@drawable/cartel_ghost"
-        android:layout_marginBottom="4dp"/>
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:context="com.pmovil.camiluz.cinesmagic.ReservasFragment">
 
-        <Button
-            android:id="@+id/boton_dia_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/contenedor_izquierdo"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:gravity="center"
-            android:layout_margin="8dp"
-            android:textAppearance="?android:textAppearanceSmall"            android:background="#3F51B5"
-            android:textColor="@android:color/white"
-            tools:text="Dic 18"
-            android:layout_weight="2"/>
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/boton_dia_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textAppearance="?android:textAppearanceSmall"            android:textColor="@android:color/white"
-            android:background="#3F51B5"
-            tools:text="Abr 15"
-            android:layout_weight="2"/>
+            <ImageView
+                android:id="@+id/cartel_reservas_imagen"
+                android:layout_width="170dp"
+                android:layout_height="251dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/cartel_ghost" />
 
-        <Button
-            android:id="@+id/boton_dia_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="8dp"
-            android:textAppearance="?android:textAppearanceSmall"            android:background="#3F51B5"
-            android:textColor="@android:color/white"
-            tools:text="Abr 16"
-            android:layout_weight="2"/>
+            <Button
+                android:id="@+id/boton_dia_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="2"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                tools:text="Dic 18" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Elija un día"
-            android:textAppearance="?android:textAppearanceSmall"            android:padding="10dp"
-            android:layout_weight="1"/>
+            <Button
+                android:id="@+id/boton_dia_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                tools:text="Abr 15" />
+
+            <Button
+                android:id="@+id/boton_dia_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="2"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                tools:text="Abr 16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Elija un día"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo_pelicula"
+                android:layout_width="wrap_content"
+                android:layout_height="251dp"
+                android:layout_toRightOf="@id/contenedor_izquierdo"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Ghost in the Shell"
+                android:textColor="@android:color/black"
+                android:textSize="24dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp">
+
+                <RadioButton
+                    android:id="@+id/hora1_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="14:00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioButton
+                    android:id="@+id/hora2_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="16:30"
+                    android:textAppearance="?android:textAppearanceMedium" />
+                <RadioButton
+                    android:id="@+id/hora3_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="18:45"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/titulo_pelicula"
-        android:layout_width="wrap_content"
-        android:layout_height="251dp"
-        android:layout_toRightOf="@id/contenedor_izquierdo"
-        android:gravity="center"
-        android:padding="8dp"
-        android:textSize="24dp"
-        android:textColor="@android:color/black"
-        android:text="Ghost in the Shell" />
-
-    <LinearLayout
-        android:id="@+id/selector_de_dias"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:gravity="center">
-
-    </LinearLayout>
-</RelativeLayout>
+</ScrollView>
