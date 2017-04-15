@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pmovil.camiluz.cinesmagic.SinopsisFragment">
+    tools:context="com.pmovil.camiluz.cinesmagic.ReservasFragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="16dp"
@@ -16,8 +17,12 @@
 
         <LinearLayout
             android:id="@+id/contenedor_izquierdo"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -72,25 +77,54 @@
                 android:textAppearance="?android:textAppearanceSmall" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/titulo_pelicula"
-            android:layout_width="match_parent"
-            android:layout_height="251dp"
-            android:layout_toRightOf="@id/contenedor_izquierdo"
-            android:gravity="center"
-            android:padding="8dp"
-            tools:text="Ghost in the Shell (3D)"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
-
         <LinearLayout
-            android:id="@+id/selector_de_dias"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/titulo_pelicula"
+                android:layout_width="wrap_content"
+                android:layout_height="251dp"
+                android:layout_toRightOf="@id/contenedor_izquierdo"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Ghost in the Shell"
+                android:textColor="@android:color/black"
+                android:textSize="24dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp">
+
+                <RadioButton
+                    android:id="@+id/hora1_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="14:00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioButton
+                    android:id="@+id/hora2_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="16:30"
+                    android:textAppearance="?android:textAppearanceMedium" />
+                <RadioButton
+                    android:id="@+id/hora3_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="18:45"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </RadioGroup>
+
+
         </LinearLayout>
-    </RelativeLayout>
+
+
+    </LinearLayout>
 </ScrollView>
