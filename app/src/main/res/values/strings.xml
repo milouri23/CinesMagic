@@ -43,6 +43,8 @@
     <string name="valor_duracion">\u0020<xliff:g example="30" id="duracion">%d</xliff:g> minutos</string>
     <string name="valor_calificacion">\u0020<xliff:g example="5.7" id="calificacion">%.1f</xliff:g>/10</string>
 
+    <string name="valor_cantidad_inicial">1</string>
+    <string name="valor_cantidad"><xliff:g example="30" id="duracion">%s</xliff:g></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

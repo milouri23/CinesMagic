@@ -17,12 +17,12 @@
 
         <LinearLayout
             android:id="@+id/contenedor_izquierdo"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -78,37 +78,82 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/titulo_pelicula"
                 android:layout_width="match_parent"
-                android:layout_height="251dp"
+                android:layout_height="125dp"
                 android:layout_toRightOf="@id/contenedor_izquierdo"
                 android:gravity="center"
                 android:padding="8dp"
-                tools:text="Ghost"
                 android:textColor="@android:color/black"
-                android:textSize="24dp" />
+                android:textSize="24sp"
+                tools:text="Ghost" />
 
+            <TextView
+                android:id="@+id/fecha_seleccionada"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:layout_toRightOf="@id/contenedor_izquierdo"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="24sp"
+                tools:text="Dic 18" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/boton_decremento"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/text_view_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/valor_cantidad_inicial"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/boton_incremento"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white"
+                    android:text="+"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/grupo_de_casillas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="12dp">
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
 
                 <!--<RadioButton
                     android:id="@+id/hora1_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="14:00"
+                    android:textSize=""
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <RadioButton
@@ -122,13 +167,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="18:45"
-                    android:textAppearance="?android:textAppearanceMedium" />-->
+                    android:textAppearance="?android:textAppearanceMedium" />&ndash;&gt;-->
             </RadioGroup>
 
-
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Reservar"
+                android:textSize="19dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_green_dark" />
         </LinearLayout>
-
-
     </LinearLayout>
 </ScrollView>
