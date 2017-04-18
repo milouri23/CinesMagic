@@ -24,6 +24,7 @@ public class TrailerFragment extends Fragment {
         ImageView trailerImage = (ImageView) trailerLayout.findViewById(R.id.trailer_imagen);
         trailerImage.setImageResource(pelicula.getImagenTrailer());
         ImageButton trailerBoton = (ImageButton) trailerLayout.findViewById(R.id.trailer_button);
+
         trailerBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

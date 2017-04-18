@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/reserva_titulo"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:text="Ghost In the shell"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/reserva_fecha"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:text="Usted no tiene reservas"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/reserva_hora"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:text="16:50 "
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/reserva_cantidad"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        tools:text="3 asientos"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/boton_eliminar"
+        android:text="Eliminar reserva"
+        android:layout_weight = "1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>
